@@ -7,7 +7,10 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
                     <div class="card-body">
-                        {{ $usr->name }}
+                        @foreach($user as $u)
+                            <p>{{$u->name}}</p>
+                        @endforeach
+                        <p>{{$user->links()}}</p>
                     </div>
             </div>
         </div>

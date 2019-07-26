@@ -19,12 +19,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/users', function () {
-    $users = [
-        'kek',
-        'shmek',
-        'huek'
-    ];
-    return view('home', compact('users'));
-});
+Route::get('/user/{usr}','TaskController@index');
 

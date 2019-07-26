@@ -3,22 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class TaskController extends Controller
 {
-    public function create() {
-        return view('home');
+    public function index(User $usr) {
+        //dd($usr);
+        return view('home', compact('usr'));
     }
-
-    public function store(Request $request) {
-        $title = $request->title;
-        echo $title;
-    }
-
-    /*
-    public function store(Request $request) {
-        $title = $request->all();
-        return response()->json($title,200);
-    }*/
-
 }

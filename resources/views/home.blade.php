@@ -7,10 +7,7 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
                     <div class="card-body">
-                        @foreach($user as $u)
-                            <p>{{$u->name}}</p>
-                        @endforeach
-                        <p>{{$user->links()}}</p>
+                        123
                     </div>
             </div>
         </div>

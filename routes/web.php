@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user','TaskController@index');
 
+Route::get('/contacts', 'ContactController@create');
+Route::post('/contacts', 'ContactController@store')->name('contact.store');
+

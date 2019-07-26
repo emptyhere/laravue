@@ -20,15 +20,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/users', function () {
-    return view('home');
+    $users = [
+        'kek',
+        'shmek',
+        'huek'
+    ];
+    return view('home', compact('users'));
 });
 
-
-Route::get('/test/{id}', 'HomeController@test');
-
-Route::prefix('jobs')->group(function () {
-
-    Route::get('create', 'TaskController@create');
-    Route::post('create', 'TaskController@store')->name('jobs.store');
-
-});
